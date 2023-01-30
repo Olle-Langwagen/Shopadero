@@ -98,14 +98,14 @@ body{
 }
 #navbar li a:hover,
 #navbar li a:active{
-    color: #088178;
+    color: #e9571e;
 }
 #navbar li a:active::after,
 #navbar li a:hover::after{
     content: "";
     width: 30%;
     height: 2px;
-    background-color: #088178;
+    background-color: #e9571e;
     bottom: -4px;
     position: absolute;
     left: 20px;
@@ -136,6 +136,7 @@ body{
 #hero h1{
     color: #e9571e;
 }
+
 #hero button:hover{
     background-color: #a03308;
 }
@@ -291,18 +292,7 @@ body{
     border-radius: 1px;
     outline: none;
 }
-#newsletter button{
-    background-color: #e9571e;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 600;
-    margin-top: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
+
 #newsletter button:hover{
     background-color: #a03308;
 }
@@ -367,7 +357,7 @@ footer .copyright{
     padding: 14px;
 }
 #page-header h2, 
-#page-header h3{
+#page-header p{
     color: #fff;
 }
 
@@ -376,11 +366,15 @@ footer .copyright{
 }
 #pagination a{
     text-decoration: none;
-    background-color: #088178;
+    background-color: #e9571e;
     padding: 15px 20px;
     border-radius: 4px;
     color: #fff;
     font-weight: 600;
+    transition: all 0.3s ease;
+}
+#pagination a:hover{
+    background-color: #a03308;
 }
 #pagination a i{
     font-size: 16px;
@@ -388,6 +382,7 @@ footer .copyright{
 }
 
 
+/* single product page */
 
 #prodetails{
     display: flex;
@@ -437,7 +432,9 @@ footer .copyright{
 #prodetails .single-pro-details span{
     line-height: 25px;
 }
-
+#prodetails .single-pro-details button:hover{
+    background-color: #a03308;
+}
 
 
 /* About Page */
@@ -522,11 +519,32 @@ footer .copyright{
     border: 1px solid #ccc;
     border-radius: 4px;
     outline: none;
+    resize: none;
+    
 }
 #contact-form form button:hover{
     background-color: #a03308;
 }
 
+/* Contact messege page */
+#contact-messege-header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 271px 0;
+    border-radius: 1px;
+    
+}
+#contact-messege-header h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+#contact-messege-header h1{
+    font-size: 50px;
+    margin-bottom: 40px;
+}
 
 /* Cart Page */
 
