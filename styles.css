@@ -136,17 +136,8 @@ body{
 #hero h1{
     color: #e9571e;
 }
-#hero button{
-    background-color: #e9571e;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 600;
-    margin-top: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+#hero button:hover{
+    background-color: #a03308;
 }
 #feature{
     display: flex;
@@ -535,6 +526,9 @@ footer .copyright{
 #contact-form form button:hover{
     background-color: #a03308;
 }
+
+
+/* Cart Page */
 
 
 @media screen and (max-width: 799px){
