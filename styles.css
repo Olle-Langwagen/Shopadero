@@ -203,7 +203,7 @@ body{
     padding: 10px 12px;
     border: 1px solid #cce7d0;
     border-radius: 25px;
-    cursor: pointer;
+    
     box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
     margin: 15px 0;
     transition: all 0.3s ease;
@@ -213,6 +213,7 @@ body{
     box-shadow: 20px 20px 30px rgba(0,0,0, 0.3);
 }
 #product1 .pro img{
+    cursor: pointer;
     width: 100%;
     border-radius: 20px;
 }
@@ -240,17 +241,10 @@ body{
     color:#47ce42
 }
 #product1 .pro .cart{
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50px;
-    background-color: #e8f6ea;
-    font-weight: 500;
-    color: #088178;
-    border-radius: 1px solid #cce7d0;
+    cursor: pointer;
     position: absolute;
-    bottom: 20px;
-    right: 10px;
+    bottom: 15px;
+    right: 15px;
 }
 
 #newsletter{
