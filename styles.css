@@ -77,11 +77,15 @@ body{
     top: 0;
     left: 0;
 }
+#header img{
+    margin-left: -30px;
+}
 
 #navbar{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: -30px;
 }
 #navbar li{
     list-style: none;
@@ -97,10 +101,12 @@ body{
     transition: all 0.3s ease;
 }
 #navbar li a:hover,
-#navbar li a:active{
+#navbar li a.active{
     color: #e9571e;
+    
+    
 }
-#navbar li a:active::after,
+#navbar li a.active::after,
 #navbar li a:hover::after{
     content: "";
     width: 30%;
@@ -132,6 +138,9 @@ body{
 }
 #hero h4{
     padding-bottom: 15px;
+}
+#hero h2{
+    margin:10px 0;
 }
 #hero h1{
     color: #e9571e;
@@ -212,6 +221,7 @@ body{
 #product1 .pro:hover{
     box-shadow: 20px 20px 30px rgba(0,0,0, 0.3);
 }
+
 #product1 .pro img{
     cursor: pointer;
     width: 100%;
@@ -245,6 +255,9 @@ body{
     position: absolute;
     bottom: 15px;
     right: 15px;
+}
+#product1 .pro button:hover{
+    background-color: #a03308;
 }
 
 #newsletter{
@@ -351,7 +364,7 @@ footer .copyright{
     padding: 14px;
 }
 #page-header h2, 
-#page-header p{
+#page-header h4{
     color: #fff;
 }
 
@@ -458,6 +471,13 @@ footer .copyright{
 }
 #about-head div{
     padding-left: 20px;
+    margin-left: 30px;
+    margin-right: 100px;
+}
+#about-head p{
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 20px;
 }
 
 
@@ -554,10 +574,10 @@ footer .copyright{
         justify-content: flex-start;
         position: fixed;
         top: 0;
-        right: -300px;
+        right: -400px;
         height: 100vh;
         width: 300px;
-        background-color: #cfdbda;
+        background-color: #E3E6F3;
         box-shadow: 0 40px 60px rgba(0,0,0,0.01);
         padding: 80px 0 0 10px;
         transition: all 0.3s ease;
