@@ -37,23 +37,7 @@
     </section>
 
     <section id="product1" class="section-p1">
-        <div class="product-container">
-          <div class="pro">
-            <img src="" class="product-image" onclick="window.location.href='singleproduct.html'">
-            <div class="description">
-              <span class="product-name"></span>
-              <h5 class="product-description"></h5>
-              <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <h4 class="product-price"></h4>
-            </div>
-            <button class="button-normal cart">Add to cart</button>
-          </div>
+        <div id="product-container">
         </div>
       </section>
 
@@ -117,21 +101,63 @@
     </footer>
     <script src="script.js"></script>
     <script>
-        // Step 2: Retrieve the JSON data
-  fetch('products.json')
-    .then(response => response.json())
-    .then(data => {
-      // Step 3: Parse the JSON data
-      const product = data.products[0]; // Example of getting the first product from the JSON data
+        window.onload = function() {
+        fetch("products.json")
+        .then(response => response.json())
+        .then(products => {
+            if (!Array.isArray(products)) {
+            throw new Error("Products is not an array.");
+            }
+            const productTemplate = document.getElementById("pro");
+            const productsContainer = document.getElementById("product-container");
+            products.forEach(product => {
+                
+                const productElement = document.createElement("div");
+                productElement.classList.add("product");
 
-      // Step 4: Dynamically update the HTML elements
-        
-      const productContainer = document.querySelector('#product1');
-      productContainer.querySelector('.product-image').src = product.image;
-      productContainer.querySelector('.product-name').textContent = product.name;
-      productContainer.querySelector('.product-description').textContent = product.description;
-      productContainer.querySelector('.product-price').textContent = product.price;
-    });
+                const productImage = document.createElement("img");
+                productImage.src = product.image;
+                productImage.classList.add("product-image");
+                productElement.appendChild(productImage);
+
+                const productDescription = document.createElement("div");
+                productDescription.classList.add("description");
+                productElement.appendChild(productDescription);
+
+                const productSpan = document.createElement("span");
+                productSpan.textContent = product.span;
+                productSpan.classList.add("span");
+                productDescription.appendChild(productSpan);
+
+                const productName = document.createElement("h5");
+                productName.textContent = product.name;
+                productName.classList.add("product-name");
+                productDescription.appendChild(productName);
+
+                const productRating = document.createElement('div');
+                productRating.classList.add('star');
+                for (let i = 0; i < product.rating; i++) {
+                    const star = document.createElement('i');
+                    star.classList.add('fas', 'fa-star');
+                    productRating.appendChild(star);
+                }
+                productDescription.appendChild(productRating);
+
+                const productPrice = document.createElement("h4");
+                productPrice.textContent = product.price;
+                productPrice.classList.add("product-price");
+                productDescription.appendChild(productPrice);
+
+                const addToCartBtn = document.createElement('button');
+                addToCartBtn.classList.add('button-normal', 'cart');
+                addToCartBtn.innerText = "Add to Cart";
+                productElement.appendChild(addToCartBtn);
+                
+                productsContainer.appendChild(productElement);
+            });
+            
+          });
+      }
       </script>
 </body>
 
