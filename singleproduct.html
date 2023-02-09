@@ -32,14 +32,30 @@
     </section>
 
     <section id="prodetails" class="section-p1">
-        <div>
-            <div class="single-pro-image">
-                <img src="" width="100%" id="MainImg" alt="product">
+    
+        <div class="single-pro-image">        
+            <img src="" width="100%" id="MainImg" alt="product">
+
+            <div class="small-img-group">
+
+                <div class="small-img-col">
+                    <img src="" width="100%" class="small-img" id="image" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="" width="100%" class="small-img" id="image1" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="" width="100%" class="small-img" id="image2" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="" width="100%" class="small-img" id="image3" alt="">
+                </div>
+                
             </div>
         </div>
-        <input type="hidden" id="productId" value="">
+
         <div class="single-pro-details">
-            <h6 id="homeShop"></h6>
+            <h6>Home</h6>
             <h4 id="productCategory"></h4>
             <h2 id="productPrice"></h2>
             <select>
@@ -111,6 +127,7 @@
     </footer>
 
     <script>
+        
         var MainImg = document.getElementById("MainImg");
         var SmallImg = document.getElementsByClassName("small-img");
 
@@ -130,26 +147,50 @@
         {
             MainImg.src = SmallImg[3].src;
         }
-        //Get the information from the product id from the shop page
-        window.onload = function(){ 
-            // your code 
-            fetch("products.json")
-            .then(response => response.json())
-            .then(products => {
-                
-                const productId = new URL(window.location.href).searchParams.get("id");
-                const product = products.find(product => product.id == productId);
-                console.log(productId);
-
-                // Now you have the product data with the given ID
-                // You can use this data to populate the single product page
-                document.querySelector("#MainImg").src = product.image;
-                document.querySelector("h2").textContent = product.price;
-                document.querySelector("span").textContent = product.description;
-
-            });
-        };
         
+        //Get the information from the product id from the shop page
+        window.onload = function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const productId = urlParams.get('id');
+
+  fetch("products.json")
+    .then(response => response.json())
+    .then(products => {
+      if (!Array.isArray(products)) {
+        throw new Error("Ingen array");
+      }
+
+      const product = products.find(product => product.id == productId);
+      if (!product) {
+        throw new Error("Ingen produkt funnen");
+      }
+      //Main image
+      const MainImg = document.querySelector("#MainImg");
+      MainImg.src = product.image;
+      //Small images
+      const image = document.querySelector("#image");
+      image.src = product.image;
+      const image1 = document.querySelector("#image1");
+      image1.src = product.image1;
+      const image2 = document.querySelector("#image2");
+      image2.src = product.image2;
+      const image3 = document.querySelector("#image3");
+      image3.src = product.image3;
+        //Product information
+
+
+      const productCategory = document.querySelector("#productCategory");
+      productCategory.textContent = product.category;
+
+      const productPrice = document.querySelector("#productPrice");
+      productPrice.textContent = `${product.price}kr`;
+
+      const productDescription = document.querySelector("#productDescription");
+      productDescription.innerHTML = product.description;
+    });
+}
+
+
 
 
     </script>

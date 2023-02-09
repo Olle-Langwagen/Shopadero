@@ -395,12 +395,13 @@ footer .copyright{
 
 #prodetails{
     display: flex;
+    justify-content: flex-start;
     margin-top: 20px;
 }
 
 
 #prodetails .single-pro-image{
-    width: 70%;
+    width: 25%;
     margin-right: 50px;
 
 }

@@ -39,7 +39,7 @@
     <section id="product1" class="section-p1">
         <div id="product-container">
         </div>
-        <input type="hidden" id="productId" value="">
+            
       </section>
 
     <section id="pagination" class="section-p1">
@@ -103,68 +103,81 @@
     <script src="script.js"></script>
     <script>
         window.onload = function() {
-        fetch("products.json")
-        .then(response => response.json())
-        .then(products => {
-            if (!Array.isArray(products)) {
-            throw new Error("Ingen array");
-            }
-            const productTemplate = document.getElementById("pro");
-            const productsContainer = document.getElementById("product-container");
-            products.forEach(product => {
-                
-                const productElement = document.createElement("div");
-                productElement.classList.add("product");
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-                const productImage = document.createElement("img");
-                productImage.src = product.image;
-                productImage.classList.add("product-image");
-                //Redirect the user to the singleproduct.html page when the img is clicked, also pass the productid
-                //Pass the id to the singleproduct.html page
-                productImage.addEventListener("click", () => {
-                    window.location.href = `singleproduct.html?id=${product.id}`;
-                });
-                console.log(product.id);
-                productElement.appendChild(productImage);
-
-                const productDescription = document.createElement("div");
-                productDescription.classList.add("description");
-                productElement.appendChild(productDescription);
-
-                const productSpan = document.createElement("span");
-                productSpan.textContent = product.span;
-                productSpan.classList.add("span");
-                productDescription.appendChild(productSpan);
-
-                const productName = document.createElement("h5");
-                productName.textContent = product.name;
-                productName.classList.add("product-name");
-                productDescription.appendChild(productName);
-
-                const productRating = document.createElement('div');
-                productRating.classList.add('star');
-                for (let i = 0; i < product.rating; i++) {
-                    const star = document.createElement('i');
-                    star.classList.add('fas', 'fa-star');
-                    productRating.appendChild(star);
-                }
-                productDescription.appendChild(productRating);
-
-                const productPrice = document.createElement("h4");
-                productPrice.textContent = product.price +"kr";
-                productPrice.classList.add("product-price");
-                productDescription.appendChild(productPrice);
-
-                const addToCartBtn = document.createElement('button');
-                addToCartBtn.classList.add('button-normal', 'cart');
-                addToCartBtn.innerText = "Add to Cart";
-                productElement.appendChild(addToCartBtn);
-                
-                productsContainer.appendChild(productElement);
-            });
-            
-          });
+  fetch("products.json")
+    .then(response => response.json())
+    .then(products => {
+      if (!Array.isArray(products)) {
+        throw new Error("Ingen array");
       }
+      const productTemplate = document.getElementById("pro");
+      const productsContainer = document.getElementById("product-container");
+      products.forEach(product => {
+
+        const productElement = document.createElement("div");
+        productElement.classList.add("product");
+
+        const productImage = document.createElement("img");
+        productImage.src = product.image;
+        productImage.classList.add("product-image");
+
+        productImage.addEventListener("click", () => {
+          window.location.href = `singleproduct.html?id=${product.id}`;
+        });
+
+        productElement.appendChild(productImage);
+
+        const productDescription = document.createElement("div");
+        productDescription.classList.add("description");
+        productElement.appendChild(productDescription);
+
+        const productSpan = document.createElement("span");
+        productSpan.textContent = product.span;
+        productSpan.classList.add("span");
+        productDescription.appendChild(productSpan);
+
+        const productName = document.createElement("h5");
+        productName.textContent = product.name;
+        productName.classList.add("product-name");
+        productDescription.appendChild(productName);
+
+        const productRating = document.createElement('div');
+        productRating.classList.add('star');
+        for (let i = 0; i < product.rating; i++) {
+          const star = document.createElement('i');
+          star.classList.add('fas', 'fa-star');
+          productRating.appendChild(star);
+        }
+        productDescription.appendChild(productRating);
+
+        const productPrice = document.createElement("h4");
+        productPrice.textContent = product.price +"kr";
+        productPrice.classList.add("product-price");
+        productDescription.appendChild(productPrice);
+
+        const addToCartBtn = document.createElement('button');
+        addToCartBtn.classList.add('button-normal', 'cart');
+        addToCartBtn.innerText = "Add to Cart";
+        addToCartBtn.addEventListener('click', () => {
+          cart.push({
+            id: product.id,
+            name: product.name,
+            price: product.price
+          });
+          localStorage.setItem('cart', JSON.stringify(cart));
+          console.log(cart);
+        });
+        productElement.appendChild(addToCartBtn);
+
+        productsContainer.appendChild(productElement);
+      });
+
+    });
+}
+
+
+
       </script>
 </body>
 
