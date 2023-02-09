@@ -1,99 +1,48 @@
 
 [
   {
-    "name": "Blue Slippers",
-    "description": "Slippers for summer",
-    "span": "Sliiiiiiipers",
-    "price": "100 kr",
+    "id": 1,
+    "name": "Pink drink",
+    "description": "Very unknown asian substance, but very pretty pink",
+    "span": "Pokémon drink",
+    "price": "29.99",
     "image": "images/pexels-olena-bohovyk-12900915.jpg",
-    "rating": 5
-  },
-  {
-    "name": "Product 2",
-    "description": "This is another sample product.",
-    "span": "Sliiiiiiipers",
-    "price": "$19.99",
-    "image": "images/pexels-olena-bohovyk-3819969.jpg",
     "rating": 4
   },
   {
-    "name": "Product 3",
-    "description": "Yet another sample product.",
-    "span": "Sliiiiiiipers",
-    "price": "$29.99",
+    "id": 2,
+    "name": "Wet coke",
+    "description": "Super tasty, the traditional coke taste, but zero sugar and zero calories.", 
+    "span": "Cola zero",
+    "price": "24.99",
+    "image": "images/pexels-olena-bohovyk-3819969.jpg",
+    "rating": 5
+  },
+  {
+    "id": 3,
+    "name": "Macha Latte",
+    "description": "Macha Latte is a Japanese green tea latte made with matcha powder, steamed milk, and sweetener. It is a popular drink in Japan and is often served in a tall glass with a lid.",
+    "span": "Green drink, maybe vegetable",
+    "price": "199.99",
     "rating": 3,
     "image": "images/pexels-olena-bohovyk-12900916.jpg"
   },
   {
-    "name": "Blue Slippers",
-    "description": "Slippers for summer",
-    "span": "Sliiiiiiipers",
-    "price": "100 kr",
-    "image": "images/pexels-olena-bohovyk-12900915.jpg",
-    "rating": 5
-  },
-  {
-    "name": "Product 2",
-    "description": "This is another sample product.",
-    "span": "Sliiiiiiipers",
-    "price": "$19.99",
-    "image": "images/pexels-olena-bohovyk-3819969.jpg",
-    "rating": 4
-  },
-  {
-    "name": "Product 3",
-    "description": "Yet another sample product.",
-    "span": "Sliiiiiiipers",
-    "price": "$29.99",
-    "rating": 3,
+    "id": 4,
+    "name": "Macha Latte",
+    "description": "Macha Latte is a Japanese green tea latte made with matcha powder, steamed milk, and sweetener. It is a popular drink in Japan and is often served in a tall glass with a lid.",
+    "span": "Green drink, maybe vegetable",
+    "price": "199.99",
+    "rating": 5,
     "image": "images/pexels-olena-bohovyk-12900916.jpg"
   },
   {
-    "name": "Blue Slippers",
-    "description": "Slippers for summer",
-    "span": "Sliiiiiiipers",
-    "price": "100 kr",
-    "image": "images/pexels-olena-bohovyk-12900915.jpg",
-    "rating": 5
-  },
-  {
-    "name": "Product 2",
-    "description": "This is another sample product.",
-    "span": "Sliiiiiiipers",
-    "price": "$19.99",
-    "image": "images/pexels-olena-bohovyk-3819969.jpg",
-    "rating": 4
-  },
-  {
-    "name": "Product 3",
-    "description": "Yet another sample product.",
-    "span": "Sliiiiiiipers",
-    "price": "$29.99",
-    "rating": 3,
-    "image": "images/pexels-olena-bohovyk-12900916.jpg"
-  },
-  {
-    "name": "Blue Slippers",
-    "description": "Slippers for summer",
-    "span": "Sliiiiiiipers",
-    "price": "100 kr",
-    "image": "images/pexels-olena-bohovyk-12900915.jpg",
-    "rating": 5
-  },
-  {
-    "name": "Product 2",
-    "description": "This is another sample product.",
-    "span": "Sliiiiiiipers",
-    "price": "$19.99",
-    "image": "images/pexels-olena-bohovyk-3819969.jpg",
-    "rating": 4
-  },
-  {
-    "name": "Product 3",
-    "description": "Yet another sample product.",
-    "span": "Sliiiiiiipers",
-    "price": "$29.99",
-    "rating": 3,
+    "id": 5,
+    "name": "Macha Latte",
+    "description": "Macha Latte is a Japanese green tea latte made with matcha powder, steamed milk, and sweetener. It is a popular drink in Japan and is often served in a tall glass with a lid.",
+    "span": "Green drink, maybe vegetable",
+    "price": "199.99",
+    "rating": 5,
     "image": "images/pexels-olena-bohovyk-12900916.jpg"
   }
 ]

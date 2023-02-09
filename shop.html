@@ -39,6 +39,7 @@
     <section id="product1" class="section-p1">
         <div id="product-container">
         </div>
+        <input type="hidden" id="productId" value="">
       </section>
 
     <section id="pagination" class="section-p1">
@@ -106,7 +107,7 @@
         .then(response => response.json())
         .then(products => {
             if (!Array.isArray(products)) {
-            throw new Error("Products is not an array.");
+            throw new Error("Ingen array");
             }
             const productTemplate = document.getElementById("pro");
             const productsContainer = document.getElementById("product-container");
@@ -118,6 +119,12 @@
                 const productImage = document.createElement("img");
                 productImage.src = product.image;
                 productImage.classList.add("product-image");
+                //Redirect the user to the singleproduct.html page when the img is clicked, also pass the productid
+                //Pass the id to the singleproduct.html page
+                productImage.addEventListener("click", () => {
+                    window.location.href = `singleproduct.html?id=${product.id}`;
+                });
+                console.log(product.id);
                 productElement.appendChild(productImage);
 
                 const productDescription = document.createElement("div");
@@ -144,7 +151,7 @@
                 productDescription.appendChild(productRating);
 
                 const productPrice = document.createElement("h4");
-                productPrice.textContent = product.price;
+                productPrice.textContent = product.price +"kr";
                 productPrice.classList.add("product-price");
                 productDescription.appendChild(productPrice);
 
