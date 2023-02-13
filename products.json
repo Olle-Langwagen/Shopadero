@@ -3,7 +3,7 @@
   {
     "id": 1,
     "name": "Pink drink",
-    "description": "Very unknown asian substance, but very pretty pink",
+    "description": "Very unknown asian substance, but it's pink and it's a drink. Oh, and it's also a Pokémon. But it's also green",
     "span": "Pokémon drink",
     "price": "29.99",
     "image": "images/small-pro-img/pexels-olena-bohovyk-12900915.jpg",
@@ -11,17 +11,17 @@
     "rating": 4,
     "image1": "images/small-pro-img/pexels-photo-12900903.jpeg",
     "image2": "images/small-pro-img/pexels-photo-12900904.jpeg",
-    "image3": "images/small-pro-img/pexels-photo-12900890.jpeg",
-    "quantity": 0
+    "image3": "images/small-pro-img/pexels-photo-12900890.jpeg"
   },
   {
     "id": 2,
-    "name": "Wet coke",
+    "name": "Coke",
     "description": "Super tasty, the traditional coke taste, but zero sugar and zero calories.", 
     "span": "Cola zero",
-    "price": "24.99",
+    "price": "9.99",
     "image": "images/pexels-olena-bohovyk-3819969.jpg",
-    "rating": 5
+    "rating": 5,
+    "quantity": 0
   },
   {
     "id": 3,
@@ -30,7 +30,8 @@
     "span": "Green drink, maybe vegetable",
     "price": "199.99",
     "rating": 3,
-    "image": "images/pexels-olena-bohovyk-12900916.jpg"
+    "image": "images/pexels-olena-bohovyk-12900916.jpg",
+    "quantity": 0
   },
   {
     "id": 4,
@@ -39,7 +40,8 @@
     "span": "Green drink, maybe vegetable",
     "price": "199.99",
     "rating": 5,
-    "image": "images/pexels-olena-bohovyk-12900916.jpg"
+    "image": "images/pexels-olena-bohovyk-12900916.jpg",
+    "quantity": 0
   },
   {
     "id": 5,
@@ -48,7 +50,8 @@
     "span": "Green drink, maybe vegetable",
     "price": "199.99",
     "rating": 5,
-    "image": "images/pexels-olena-bohovyk-12900916.jpg"
+    "image": "images/pexels-olena-bohovyk-12900916.jpg",
+    "quantity": 0
   }
 ]
 

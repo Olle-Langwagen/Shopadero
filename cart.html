@@ -32,15 +32,22 @@
         </div>
     </section>
     
-    <!-- Header 
-    <section id="page-header" class="about-header">
-        <h2>Contact</h2>
-        <p>Leave a message or contact us!</p>
+    
+    <section id="cart-header" class="about-header">
+        <h2>Your Items</h2>
+        <p>Thanks for shopping with us!</p>
     </section>
-    -->
-    <div id="cart-container"></div>
+    
+    <div id="cart-container" class="section-p1"></div>
 
-    <h4 id="total-price"></h4>
+    <!--Gradient border around total price-->
+    <div class="total-price-border">
+        <div class="gradient-border orange-gradient-border">
+            <h4 id="total-price"></h4>
+        </div>
+    </div>
+    
+
     
     <script>
         // Update the quantity of an item in the cart
@@ -72,24 +79,51 @@ function displayCart() {
     let itemElement = document.createElement("div");
     itemElement.classList.add("cart-item");
 
+    let itemImage = document.createElement("img");
+    itemImage.src = item.image;
+    itemImage.alt = item.name;
+    itemElement.appendChild(itemImage);
+
+    let itemDescription = document.createElement("p");
+    itemDescription.textContent = item.description;
+    itemDescription.classList.add("cart-item-description")
+    itemElement.appendChild(itemDescription);
+
+    let itemInfo = document.createElement("div");
+    itemInfo.classList.add("item-info");
+    itemElement.appendChild(itemInfo);
+
     let itemName = document.createElement("h5");
     itemName.textContent = item.name;
-    itemElement.appendChild(itemName);
+    itemInfo.appendChild(itemName);
+
+   
+    //Set the item price depending on the quantity, rounded to 2 decimals using js
+    let itemPrice = document.createElement("p");
+    let notRounded = item.price * item.quantity;
+    rounded = notRounded.toFixed(2);
+    itemPrice.textContent = `Price: ${rounded} kr`;
+    itemInfo.appendChild(itemPrice);
+
+
+
 
     let itemQuantity = document.createElement("input");
     itemQuantity.type = "number";
+    itemQuantity.min = "1";
     itemQuantity.value = item.quantity;
     itemQuantity.addEventListener("change", function() {
       updateQuantity(item.id, this.value);
     });
-    itemElement.appendChild(itemQuantity);
+    itemInfo.appendChild(itemQuantity);
 
     let removeBtn = document.createElement("button");
+    removeBtn.classList.add("button-normal")
     removeBtn.textContent = "Remove";
     removeBtn.addEventListener("click", function() {
       removeItem(item.id);
     });
-    itemElement.appendChild(removeBtn);
+    itemInfo.appendChild(removeBtn);
 
     cartContainer.appendChild(itemElement);
   });
@@ -100,7 +134,7 @@ function displayCart() {
 
 // Calculate the total price of all items in the cart
 function calculateTotalPrice() {
-  return cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  return cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
 }
 
 // Save the cart to local storage

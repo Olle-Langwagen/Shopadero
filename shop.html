@@ -13,7 +13,8 @@
 
 <body>
     <section id="header">
-        <a href="#top"><img src="images\slippers-gc50344fc2_640.png" class="logo" alt="logo" style="height: 80px; width: 51,25px;"></a>        
+        
+        <a href="#top"><img src="images\pngfind.com-drinks-png-8101.png" class="logo" alt="logo" style="height: 100px;"></a>        
         <div>
             <ul id="navbar">
                 <li><a href="index.html">Home</a></li>
@@ -35,7 +36,12 @@
         <h2>Shop</h2>
         <h4>Here you can buy some stuff</h4>
     </section>
+    <section id="center-text">
+        <h1>
+            All products
+        </h1>
 
+    </section>
     <section id="product1" class="section-p1">
         <div id="product-container">
         </div>
@@ -132,6 +138,11 @@
         productDescription.classList.add("description");
         productElement.appendChild(productDescription);
 
+        const productText = document.createElement("p")
+        productText.textContent = product.description;
+        productText.classList.add("product-text");
+        productDescription.appendChild(productText);
+
         const productSpan = document.createElement("span");
         productSpan.textContent = product.span;
         productSpan.classList.add("span");
@@ -160,13 +171,26 @@
         addToCartBtn.classList.add('button-normal', 'cart');
         addToCartBtn.innerText = "Add to Cart";
         addToCartBtn.addEventListener('click', () => {
-          cart.push({
+        let itemFound = false;
+        for (let i = 0; i < cart.length; i++) {
+            if (cart[i].id === product.id) {
+            cart[i].quantity++;
+            itemFound = true;
+            break;
+            }
+        }
+        if (!itemFound) {
+            cart.push({
             id: product.id,
             name: product.name,
-            price: product.price
-          });
-          localStorage.setItem('cart', JSON.stringify(cart));
-          console.log(cart);
+            price: product.price,
+            image: product.image,
+            description: product.description,
+            quantity: 1
+            });
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        console.log(cart);
         });
         productElement.appendChild(addToCartBtn);
 
