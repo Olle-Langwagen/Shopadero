@@ -8,6 +8,7 @@
     <title>Shop</title>
     <script src="https://kit.fontawesome.com/cb6bb63253.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -22,6 +23,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a id="mobile-nav-cart" href="cart.html"><i class="fa fa-cart-shopping"></i></a></li>
+                <span class="cart-quantity" id="lblCartCount"></span>
                 <a href="#" id="close"><i class="fa fa-times"></i></a>
             </ul>
         </div>
@@ -167,41 +169,53 @@
         productPrice.classList.add("product-price");
         productDescription.appendChild(productPrice);
 
+        const cartQuantity = document.querySelector('.cart-quantity');
+        cartQuantity.textContent = cart.length;
+
+
         const addToCartBtn = document.createElement('button');
         addToCartBtn.classList.add('button-normal', 'cart');
         addToCartBtn.innerText = "Add to Cart";
+
         addToCartBtn.addEventListener('click', () => {
-        let itemFound = false;
-        for (let i = 0; i < cart.length; i++) {
-            if (cart[i].id === product.id) {
-            cart[i].quantity++;
-            itemFound = true;
-            break;
+            let itemFound = false;
+
+            for (let i = 0; i < cart.length; i++) {
+                if (cart[i].id === product.id) {
+                    cart[i].quantity++;
+                    itemFound = true;
+                    break;
+                }
             }
-        }
-        if (!itemFound) {
-            cart.push({
-            id: product.id,
-            name: product.name,
-            price: product.price,
-            image: product.image,
-            description: product.description,
-            quantity: 1
-            });
-        }
-        localStorage.setItem('cart', JSON.stringify(cart));
-        console.log(cart);
+
+            if (!itemFound) {
+                cart.push({
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    description: product.description,
+                    quantity: 1
+                });
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            console.log(cart);
+
+            // Start animation here
+            addToCartBtn.classList.add('animate__animated', 'animate__flip');
+
+            setTimeout(() => {
+                addToCartBtn.classList.remove('animate__animated', 'animate__flip');
+            }, 1000);
         });
+
+
         productElement.appendChild(addToCartBtn);
-
         productsContainer.appendChild(productElement);
-      });
-
-    });
+        });
+    })
 }
-
-
-
       </script>
 </body>
 

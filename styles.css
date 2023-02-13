@@ -109,6 +109,20 @@ body{
     color: #1a1a1a;
     transition: all 0.3s ease;
 }
+
+.cart-quantity{
+    border-radius: 9px;
+}
+
+#lblCartCount {
+    font-size: 12px;
+    background: #ff0000;
+    color: #fff;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-left: -10px;
+}
+
 #navbar li a:hover,
 #navbar li a.active{
     color: #e9571e;
@@ -204,6 +218,8 @@ body{
     background-color: #e04212;
 }
 
+/*Shop*/
+  
 #product1{
     text-align: center;
 
@@ -229,7 +245,7 @@ body{
 }
 #product1 .product:hover{
     box-shadow: 20px 20px 30px rgba(0,0,0, 0.3);
-    transform: scale(1.1)
+    transform: scale(1.06)
 }
 #product1 .product img{
     cursor: pointer;
@@ -413,7 +429,10 @@ footer .copyright{
 #prodetails .single-pro-image{
     width: 25%;
     margin-right: 50px;
-
+}
+#prodetails .single-pro-image img{
+    width: 100%;
+    border-radius: 10px;
 }
 .small-img-group{
     display: flex;
