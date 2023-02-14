@@ -230,10 +230,12 @@
             console.log(cart);
 
             // Start animation here
-            addToCartBtn.classList.add('animate__animated', 'animate__hinge');
+            addToCartBtn.classList.add('animate__animated', 'animate__bounceIn');
+            
 
             setTimeout(() => {
-                addToCartBtn.classList.remove('animate__animated', 'animate__hinge');
+                addToCartBtn.classList.remove('animate__animated', 'animate__bounceIn');
+                
             }, 2000);
         });
 

@@ -22,7 +22,8 @@
                 <li><a class="active" href="shop.html">Shop</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a id="mobile-nav-cart" href="cart.html"><i class="fa fa-cart-shopping"></i></a></li>
+                <li style="position: absolute; left: 50%; transform: translateX(-50%);"><span class="site-name">Drinkadero</span></li>
+                <li><a class="cart-icon" id="mobile-nav-cart" href="cart.html"><i class="fa fa-cart-shopping"></i></a></li>
                 <span class="cart-quantity" id="lblCartCount"></span>
                 <a href="#" id="close"><i class="fa fa-times"></i></a>
             </ul>
@@ -44,6 +45,14 @@
         </h1>
 
     </section>
+
+    <section id="search" class="section-p1">
+        <form id="search-form">
+          <input type="text" id="search-input" placeholder="Search products...">
+          <button type="submit" id="search-button">Search</button>
+        </form>
+      </section>
+
     <section id="product1" class="section-p1">
         <div id="product-container">
         </div>
@@ -111,6 +120,7 @@
     <script src="script.js"></script>
     <script>
         window.onload = function() {
+            
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
   fetch("products.json")
@@ -125,6 +135,8 @@
 
         const productElement = document.createElement("div");
         productElement.classList.add("product");
+        productElement.classList.add(product.name.toLowerCase().replace(/\s/g, "-"));
+        console.log(product.name.toLowerCase().replace(/\s/g, "-"));
 
         const productImage = document.createElement("img");
         productImage.src = product.image;
@@ -171,7 +183,7 @@
 
         const cartQuantity = document.querySelector('.cart-quantity');
         cartQuantity.textContent = cart.length;
-
+        
 
         const addToCartBtn = document.createElement('button');
         addToCartBtn.classList.add('button-normal', 'cart');
@@ -201,18 +213,43 @@
 
             localStorage.setItem('cart', JSON.stringify(cart));
             console.log(cart);
+            cartQuantity.textContent = cart.length;
+            
 
-            // Start animation here
-            productElement.classList.add('animate__animated', 'animate__hinge');
 
-            setTimeout(() => {
-                productElement.classList.remove('animate__animated', 'animate__hinge');
-            }, 10000);
+
+        //Button animation
+        addToCartBtn.classList.add('animate__animated', 'animate__bounceIn');
+
+        setTimeout(() => {
+        addToCartBtn.classList.remove('animate__animated', 'animate__bounceIn');
+        }, 2000);
         });
 
 
         productElement.appendChild(addToCartBtn);
         productsContainer.appendChild(productElement);
+
+
+        // Search
+        const searchForm = document.getElementById("search-form");
+        const products = document.querySelectorAll(".product");
+
+        searchForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const searchInput = document.getElementById("search-input");
+        const searchTerm = searchInput.value.trim().toLowerCase();
+
+        products.forEach(product => {
+            const productName = product.querySelector('.product-name').textContent.toLowerCase();
+            if (productName.includes(searchTerm) || searchTerm === "") {
+            product.style.display = "block";
+            } else {
+            product.style.display = "none";
+            }
+        });
+        });
         });
     })
 }

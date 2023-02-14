@@ -17,7 +17,6 @@ document.querySelector("#news-button").onclick = function() {
 
 }
 
-
 if(bar){
     bar.addEventListener('click', () => {
         nav.classList.add('active');
@@ -29,3 +28,16 @@ if(close){
         nav.classList.remove('active');
     });
 }
+
+let prevScrollpos = window.pageYOffset;
+
+window.onscroll = function() {
+  let currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("header").style.top = "0";
+  } else {
+    document.getElementById("header").style.top = "-200px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+

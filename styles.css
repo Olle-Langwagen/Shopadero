@@ -64,7 +64,42 @@ body{
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
     background-color: #eae9f5;
+    
 }
+
+/*Search Bar*/
+#search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Style for the search input */
+#search-input {
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+  width: 250px;
+  margin-right: 10px;
+}
+
+/* Style for the search button */
+#search-button {
+  padding: 10px 20px;
+  background-color: #e9571e;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
 #center-text h1{
     display: flex;
     justify-content: center;
@@ -80,11 +115,15 @@ body{
     justify-content: space-between;
     padding: 20px 80px;
     background-color: #E3E6F3;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     z-index: 999;
     position: sticky;
     top: 0;
     left: 0;
+    transition: all 0.3s ease;
+}
+#header.scroll {
+    transform: translateY(-100%);
 }
 #header img{
     margin-left: -30px;
@@ -95,11 +134,13 @@ body{
     align-items: center;
     justify-content: center;
     margin-right: -30px;
+    flex-grow: 1;
 }
 #navbar li{
     list-style: none;
     padding: 0 20px;
     position: relative;
+    text-align: center;
 }
 #navbar li a{
     text-decoration: none;
@@ -121,6 +162,13 @@ body{
     padding: 0 5px;
     vertical-align: top;
     margin-left: -10px;
+}
+#navbar .site-name{
+    font-size: 26px;
+    font-weight: 700;
+    background-image: linear-gradient(to right, #e9571e, #f4a72d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .logo{
     transition: all 0.3s ease;
@@ -240,7 +288,7 @@ body{
     padding-top: 20px;
 }
 #product1 .product{
-    width: 21%;
+    width: 16%;
     min-width: 230px;
     padding: 10px 12px;
     border: 1px solid #e9571e;
@@ -690,7 +738,15 @@ footer .copyright{
 
 
 
-
+/*Fly to cart*/
+@keyframes flyToCart {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(0, -1000px);
+    }
+  }
 
 @media screen and (max-width: 799px){
     .section-p1{
