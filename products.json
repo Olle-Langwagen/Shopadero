@@ -52,6 +52,58 @@
     "rating": 5,
     "image": "images/pexels-olena-bohovyk-12900916.jpg",
     "quantity": 0
+  },
+  {
+    "id": 1,
+    "name": "Pink drink",
+    "description": "Very unknown asian substance, but it's pink and it's a drink. Oh, and it's also a Pokémon. But it's also green",
+    "span": "Pokémon drink",
+    "price": "29.99",
+    "image": "images/small-pro-img/pexels-olena-bohovyk-12900915.jpg",
+    "category": "Drinks",
+    "rating": 4,
+    "image1": "images/small-pro-img/pexels-photo-12900903.jpeg",
+    "image2": "images/small-pro-img/pexels-photo-12900904.jpeg",
+    "image3": "images/small-pro-img/pexels-photo-12900890.jpeg"
+  },
+  {
+    "id": 1,
+    "name": "Pink drink",
+    "description": "Very unknown asian substance, but it's pink and it's a drink. Oh, and it's also a Pokémon. But it's also green",
+    "span": "Pokémon drink",
+    "price": "29.99",
+    "image": "images/small-pro-img/pexels-olena-bohovyk-12900915.jpg",
+    "category": "Drinks",
+    "rating": 4,
+    "image1": "images/small-pro-img/pexels-photo-12900903.jpeg",
+    "image2": "images/small-pro-img/pexels-photo-12900904.jpeg",
+    "image3": "images/small-pro-img/pexels-photo-12900890.jpeg"
+  },
+  {
+    "id": 1,
+    "name": "Pink drink",
+    "description": "Very unknown asian substance, but it's pink and it's a drink. Oh, and it's also a Pokémon. But it's also green",
+    "span": "Pokémon drink",
+    "price": "29.99",
+    "image": "images/small-pro-img/pexels-olena-bohovyk-12900915.jpg",
+    "category": "Drinks",
+    "rating": 4,
+    "image1": "images/small-pro-img/pexels-photo-12900903.jpeg",
+    "image2": "images/small-pro-img/pexels-photo-12900904.jpeg",
+    "image3": "images/small-pro-img/pexels-photo-12900890.jpeg"
+  },
+  {
+    "id": 1,
+    "name": "Pink drink",
+    "description": "Very unknown asian substance, but it's pink and it's a drink. Oh, and it's also a Pokémon. But it's also green",
+    "span": "Pokémon drink",
+    "price": "29.99",
+    "image": "images/small-pro-img/pexels-olena-bohovyk-12900915.jpg",
+    "category": "Drinks",
+    "rating": 4,
+    "image1": "images/small-pro-img/pexels-photo-12900903.jpeg",
+    "image2": "images/small-pro-img/pexels-photo-12900904.jpeg",
+    "image3": "images/small-pro-img/pexels-photo-12900890.jpeg"
   }
 ]
 

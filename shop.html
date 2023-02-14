@@ -203,11 +203,11 @@
             console.log(cart);
 
             // Start animation here
-            addToCartBtn.classList.add('animate__animated', 'animate__flip');
+            productElement.classList.add('animate__animated', 'animate__hinge');
 
             setTimeout(() => {
-                addToCartBtn.classList.remove('animate__animated', 'animate__flip');
-            }, 1000);
+                productElement.classList.remove('animate__animated', 'animate__hinge');
+            }, 10000);
         });
 
 

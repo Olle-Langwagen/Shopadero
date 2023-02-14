@@ -8,12 +8,13 @@
     <title>Shop</title>
     <script src="https://kit.fontawesome.com/cb6bb63253.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <section id="header">
-        <a href="#top"><img src="images\slippers-gc50344fc2_640.png" class="logo" alt="logo" style="height: 80px; width: 51,25px;"></a>
+        <a href="#top"><img src="images\pngfind.com-drinks-png-8101.png" class="logo" alt="logo" style="height: 100px;"></a>        
         
         <div>
             <ul id="navbar">
@@ -22,6 +23,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a id="mobile-nav-cart" href="cart.html"><i class="fa fa-cart-shopping"></i></a></li>
+                <span class="cart-quantity" id="lblCartCount"></span>
                 <a href="#" id="close"><i class="fa fa-times"></i></a>
             </ul>
         </div>
@@ -33,12 +35,14 @@
     </section>
 
     <section id="hero">
-        <h4>Welcome to Toffladero</h4>
-        <h2>The best price for slippers</h2>
-        <h1>On all products</h1>
-        <button onclick="location.href=`#product1`" class="button-normal">Shop Now</button>
+        <h4>Welcome to Drinkadero</h4>
+        <h2>Best price on all drinks!</h2>
+        <h1>#StayHydrated</h1>
+        <button onclick="location.href=`#center-text`" class="button-normal">Shop Now</button>
     </section>
+    <!--
 
+    
     <section id="feature" class="section-p1">
         <div class="feature-box">
             <img src="images\f1.png" alt="product1">
@@ -65,141 +69,19 @@
             <h6>24/7 Support</h6>
         </div>
     </section>
+-->
+    <section id="center-text">
+        <h1>
+            Feauted Products
+        </h1>
+
+    </section>
 
     <section id="product1" class="section-p1">
-        <h2>Featured Products</h2>
-        <p>Collection</p>
-        <div class="product-container">
-            <div class="product">
-                <img src="images/f1.jpg" alt="product1" onclick="window.location.href='singleproduct.html'">
-                <div class="description">
-                    <span>Volvo</span>
-                    <h5>Volvo XC90</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>1000kr</h4>
-                </div>
-                <button class="button-normal cart">Add to cart</button>
-            </div>
-            <div class="pro">
-                <img src="images/f1.jpg" alt="product1" onclick="window.location.href='singleproduct.html'">
-                <div class="description">
-                    <span>Volvo</span>
-                    <h5>Volvo XC90</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>1000kr</h4>
-                </div>
-                <button class="button-normal cart">Add to cart</button>
-            </div>
-            <div class="pro">
-                <img src="images/f1.jpg" alt="product1" onclick="window.location.href='singleproduct.html'">
-                <div class="description">
-                    <span>Volvo</span>
-                    <h5>Volvo XC90</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>1000kr</h4>
-                </div>
-                <button class="button-normal cart">Add to cart</button>
-            </div>
-            <div class="pro">
-                <img src="images/f1.jpg" alt="product1" onclick="window.location.href='singleproduct.html'">
-                <div class="description">
-                    <span>Volvo</span>
-                    <h5>Volvo XC90</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>1000kr</h4>
-                </div>
-                <button class="button-normal cart">Add to cart</button>
-            </div>
-            <div class="pro">
-                <img src="images/f1.jpg" alt="product1" onclick="window.location.href='singleproduct.html'">
-                <div class="description">
-                    <span>Volvo</span>
-                    <h5>Volvo XC90</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>1000kr</h4>
-                </div>
-                <button class="button-normal cart">Add to cart</button>
-            </div>
-            <div class="pro">
-                <img src="images/f1.jpg" alt="product1" onclick="window.location.href='singleproduct.html'">
-                <div class="description">
-                    <span>Volvo</span>
-                    <h5>Volvo XC90</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>1000kr</h4>
-                </div>
-                <button class="button-normal cart">Add to cart</button>
-            </div>
-            <div class="pro">
-                <img src="images/f1.jpg" alt="product1" onclick="window.location.href='singleproduct.html'">
-                <div class="description">
-                    <span>Volvo</span>
-                    <h5>Volvo XC90</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>1000kr</h4>
-                </div>
-                <button class="button-normal cart">Add to cart</button>
-            </div>
-            <div class="pro">
-                <img src="images/f1.jpg" alt="product1" onclick="window.location.href='singleproduct.html'">
-                <div class="description">
-                    <span>Volvo</span>
-                    <h5>Volvo XC90</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>1000kr</h4>
-                </div>
-                <button class="button-normal cart">Add to cart</button>
-            </div>
+        <div id="product-container">
         </div>
-    </section>
+            
+      </section>
 
     <section id="newsletter" class="section-p1 section-m1">
         <div class="newstext">
@@ -252,7 +134,116 @@
             <p>© 2023 All rights reserved <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa-solid fa-hippo"></i></a></p>
         </div>
     </footer>
+
     <script src="script.js"></script>
+    <script>
+        window.onload = function() {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  fetch("products.json")
+    .then(response => response.json())
+    .then(products => {
+      if (!Array.isArray(products)) {
+        throw new Error("Ingen array");
+      }
+      const productTemplate = document.getElementById("pro");
+      const productsContainer = document.getElementById("product-container");
+      products.slice(0, 4).forEach(product => {
+
+        const productElement = document.createElement("div");
+        productElement.classList.add("product");
+
+        const productImage = document.createElement("img");
+        productImage.src = product.image;
+        productImage.classList.add("product-image");
+
+        productImage.addEventListener("click", () => {
+          window.location.href = `singleproduct.html?id=${product.id}`;
+        });
+
+        productElement.appendChild(productImage);
+
+        const productDescription = document.createElement("div");
+        productDescription.classList.add("description");
+        productElement.appendChild(productDescription);
+
+        const productText = document.createElement("p")
+        productText.textContent = product.description;
+        productText.classList.add("product-text");
+        productDescription.appendChild(productText);
+
+        const productSpan = document.createElement("span");
+        productSpan.textContent = product.span;
+        productSpan.classList.add("span");
+        productDescription.appendChild(productSpan);
+
+        const productName = document.createElement("h5");
+        productName.textContent = product.name;
+        productName.classList.add("product-name");
+        productDescription.appendChild(productName);
+
+        const productRating = document.createElement('div');
+        productRating.classList.add('star');
+        for (let i = 0; i < product.rating; i++) {
+          const star = document.createElement('i');
+          star.classList.add('fas', 'fa-star');
+          productRating.appendChild(star);
+        }
+        productDescription.appendChild(productRating);
+
+        const productPrice = document.createElement("h4");
+        productPrice.textContent = product.price +"kr";
+        productPrice.classList.add("product-price");
+        productDescription.appendChild(productPrice);
+
+        const cartQuantity = document.querySelector('.cart-quantity');
+        cartQuantity.textContent = cart.length;
+
+
+        const addToCartBtn = document.createElement('button');
+        addToCartBtn.classList.add('button-normal', 'cart');
+        addToCartBtn.innerText = "Add to Cart";
+
+        addToCartBtn.addEventListener('click', () => {
+            let itemFound = false;
+
+            for (let i = 0; i < cart.length; i++) {
+                if (cart[i].id === product.id) {
+                    cart[i].quantity++;
+                    itemFound = true;
+                    break;
+                }
+            }
+
+            if (!itemFound) {
+                cart.push({
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    description: product.description,
+                    quantity: 1
+                });
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            console.log(cart);
+
+            // Start animation here
+            addToCartBtn.classList.add('animate__animated', 'animate__hinge');
+
+            setTimeout(() => {
+                addToCartBtn.classList.remove('animate__animated', 'animate__hinge');
+            }, 2000);
+        });
+
+
+        productElement.appendChild(addToCartBtn);
+        productsContainer.appendChild(productElement);
+        });
+    })
+}
+      </script>
 
 </body>
 

@@ -122,7 +122,12 @@ body{
     vertical-align: top;
     margin-left: -10px;
 }
-
+.logo{
+    transition: all 0.3s ease;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
 #navbar li a:hover,
 #navbar li a.active{
     color: #e9571e;
@@ -164,6 +169,9 @@ body{
 }
 #hero h2{
     margin:10px 0;
+}
+#hero span{
+    color: #e9571e;
 }
 #hero h1{
     color: #e9571e;
