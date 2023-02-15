@@ -21,7 +21,9 @@
     "price": "9.99",
     "image": "images/pexels-olena-bohovyk-3819969.jpg",
     "rating": 5,
-    "quantity": 0
+    "image1": "images/small-pro-img/pexels-olena-bohovyk-13574408.jpg",
+    "image2": "images/small-pro-img/pexels-olena-bohovyk-13574409.jpg",
+    "image3": "images/small-pro-img/pexels-photo-12900890.jpeg"
   },
   {
     "id": 3,
@@ -31,79 +33,95 @@
     "price": "199.99",
     "rating": 3,
     "image": "images/pexels-olena-bohovyk-12900916.jpg",
-    "quantity": 0
+    "image1": "images/small-pro-img/pexels-olena-bohovyk-12900876.jpg",
+    "image2": "images/small-pro-img/pexels-olena-bohovyk-12900896.jpg",
+    "image3": "images/small-pro-img/pexels-olena-bohovyk-12900897.jpg"
+    
   },
   {
     "id": 4,
-    "name": "Macha Latte",
-    "description": "Macha Latte is a Japanese green tea latte made with matcha powder, steamed milk, and sweetener. It is a popular drink in Japan and is often served in a tall glass with a lid.",
-    "span": "Green drink, maybe vegetable",
-    "price": "199.99",
-    "rating": 5,
-    "image": "images/pexels-olena-bohovyk-12900916.jpg",
-    "quantity": 0
+    "name": "Fritz Cola",
+    "description": "Fritz Cola is a German cola brand. It was first produced in 1905 by the Fritz Kola company in Berlin, Germany. Fritz Cola is a non-alcoholic, non-carbonated soft drink made from a blend of natural ingredients, including sugar, water, and natural flavors.",
+    "span": "German cola",
+    "price": "39.99",
+    "rating": 4,
+    "image": "images/pexels-olena-bohovyk-12900909.jpg",
+    "image1": "images/small-pro-img/pexels-olena-bohovyk-12900902.jpg",
+    "image2": "images/small-pro-img/pexels-olena-bohovyk-12900896.jpg",
+    "image3": "images/small-pro-img/pexels-olena-bohovyk-12900897.jpg"
   },
   {
     "id": 5,
-    "name": "Macha Latte",
-    "description": "Macha Latte is a Japanese green tea latte made with matcha powder, steamed milk, and sweetener. It is a popular drink in Japan and is often served in a tall glass with a lid.",
-    "span": "Green drink, maybe vegetable",
-    "price": "199.99",
+    "name": "Mizu Mate",
+    "description": "Mizy Mate is a Brazilian drink, it's a refreshing drink with a hint of mint and a little bit of sugar. It's a great drink for a hot summer day.",
+    "span": "Brazilian drink",
+    "price": "19.99",
     "rating": 5,
-    "image": "images/pexels-olena-bohovyk-12900916.jpg",
-    "quantity": 0
+    "image": "images/pexels-olena-bohovyk-12851571.jpg",
+    "image1": "images/small-pro-img/pexels-olena-bohovyk-12851569.jpg",
+    "image2": "images/small-pro-img/pexels-olena-bohovyk-12851567.jpg",
+    "image3": "images/small-pro-img/pexels-olena-bohovyk-12851545.jpg"
   },
   {
-    "id": 1,
-    "name": "Pink drink",
-    "description": "Very unknown asian substance, but it's pink and it's a drink. Oh, and it's also a Pokémon. But it's also green",
-    "span": "Pokémon drink",
+    "id": 6,
+    "name": "Vegan Cola",
+    "description": "Vegan Cola is a natural cola drink made from stevia, a natural sweetener. It is a great alternative to regular cola drinks.",
+    "span": "Ultra healthy cola",
     "price": "29.99",
-    "image": "images/small-pro-img/pexels-olena-bohovyk-12900915.jpg",
-    "category": "Drinks",
-    "rating": 4,
-    "image1": "images/small-pro-img/pexels-photo-12900903.jpeg",
-    "image2": "images/small-pro-img/pexels-photo-12900904.jpeg",
-    "image3": "images/small-pro-img/pexels-photo-12900890.jpeg"
+    "rating": 2,
+    "image": "images/pexels-olena-bohovyk-12851551.jpg",
+    "image1": "images/small-pro-img/pexels-olena-bohovyk-12851543.jpg",
+    "image2": "images/small-pro-img/pexels-olena-bohovyk-12851542.jpg",
+    "image3": "images/small-pro-img/pexels-olena-bohovyk-12851553.jpg"
   },
   {
-    "id": 1,
-    "name": "Pink drink",
-    "description": "Very unknown asian substance, but it's pink and it's a drink. Oh, and it's also a Pokémon. But it's also green",
-    "span": "Pokémon drink",
-    "price": "29.99",
-    "image": "images/small-pro-img/pexels-olena-bohovyk-12900915.jpg",
-    "category": "Drinks",
+  "id": 7,
+    "name": "Pepsi",
+    "description": "Pepsi is a carbonated soft drink manufactured by PepsiCo. Originally created and developed in 1893 by Caleb Bradham and introduced as Brad's Drink, it was renamed as Pepsi-Cola on August 28, 1898, and then as Pepsi in 1961.",
+    "span": "Pepsi cola",
+    "price": "9.99",
     "rating": 4,
-    "image1": "images/small-pro-img/pexels-photo-12900903.jpeg",
-    "image2": "images/small-pro-img/pexels-photo-12900904.jpeg",
-    "image3": "images/small-pro-img/pexels-photo-12900890.jpeg"
+    "image": "images/pexels-olena-bohovyk-12040254.jpg",
+    "image1": "images/small-pro-img/pexels-olena-bohovyk-12040258.jpg",
+    "image2": "images/small-pro-img/pexels-olena-bohovyk-12040259.jpg",
+    "image3": "images/small-pro-img/pexels-olena-bohovyk-12040251.jpg"
   },
   {
-    "id": 1,
-    "name": "Pink drink",
-    "description": "Very unknown asian substance, but it's pink and it's a drink. Oh, and it's also a Pokémon. But it's also green",
-    "span": "Pokémon drink",
-    "price": "29.99",
-    "image": "images/small-pro-img/pexels-olena-bohovyk-12900915.jpg",
-    "category": "Drinks",
-    "rating": 4,
-    "image1": "images/small-pro-img/pexels-photo-12900903.jpeg",
-    "image2": "images/small-pro-img/pexels-photo-12900904.jpeg",
-    "image3": "images/small-pro-img/pexels-photo-12900890.jpeg"
+  "id": 8,
+    "name": "Becherovka",
+    "description": "Becherovka is a Czech herbal liqueur made from 40 herbs and spices. It is produced by the Becherovka Distillery in Prague, Czech Republic.",
+    "span": "Czech herbal liqueur",
+    "price": "249.99",
+    "rating": 5,
+    "image": "images/pexels-olena-bohovyk-11538290.jpg",
+    "image1": "images/small-pro-img/pexels-olena-bohovyk-11538295.jpg",
+    "image2": "images/small-pro-img/pexels-olena-bohovyk-11538288.jpg",
+    "image3": "images/small-pro-img/pexels-olena-bohovyk-11538279.jpg"
   },
   {
-    "id": 1,
-    "name": "Pink drink",
-    "description": "Very unknown asian substance, but it's pink and it's a drink. Oh, and it's also a Pokémon. But it's also green",
-    "span": "Pokémon drink",
-    "price": "29.99",
-    "image": "images/small-pro-img/pexels-olena-bohovyk-12900915.jpg",
-    "category": "Drinks",
-    "rating": 4,
-    "image1": "images/small-pro-img/pexels-photo-12900903.jpeg",
-    "image2": "images/small-pro-img/pexels-photo-12900904.jpeg",
-    "image3": "images/small-pro-img/pexels-photo-12900890.jpeg"
+  "id": 9,
+    "name": "Cold Brew",
+    "description": "Cold brew is a coffee brewing method that uses room temperature or cold water to extract coffee flavor and caffeine from ground coffee beans. It is typically served over ice or with ice.",
+    "span": "Cold brew coffee",
+    "price": "49.99",
+    "rating": 3,
+    "image": "images/pexels-olena-bohovyk-4560449.jpg",
+    "image1": "images/small-pro-img/pexels-olena-bohovyk-4560448.jpg",
+    "image2": "images/small-pro-img/pexels-olena-bohovyk-4560451.jpg",
+    "image3": "images/small-pro-img/pexels-olena-bohovyk-4560446.jpg"
+  },
+  {
+  "id": 10,
+    "name": "Black Coffee",
+    "description": "Black coffee is coffee that is brewed without the addition of milk, sugar, or other sweeteners. It is the most common form of coffee consumed in the world.",
+    "span": "Normal coffee",
+    "price": "14.99",
+    "rating": 5,
+    "image": "images/pexels-olena-bohovyk-12821522.jpg",
+    "image1": "images/small-pro-img/pexels-olena-bohovyk-12821520.jpg",
+    "image2": "images/small-pro-img/pexels-olena-bohovyk-12821514.jpg",
+    "image3": "images/small-pro-img/pexels-olena-bohovyk-12900869.jpg"
   }
+  
 ]
 

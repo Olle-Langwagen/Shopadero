@@ -9,32 +9,33 @@
     <script src="https://kit.fontawesome.com/cb6bb63253.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    
 </head>
 
 <body>
     
-    <section id="header">
+  <section id="header">
         
-        <a href="#top"><img src="images\pngfind.com-drinks-png-8101.png" class="logo" alt="logo" style="height: 100px;"></a>        
-        <div>
-            <ul id="navbar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li style="position: absolute; left: 50%; transform: translateX(-50%);"><span class="site-name">Drinkadero</span></li>
-                <li><a class="cart-icon active" id="mobile-nav-cart" href="cart.html"><i class="fa fa-cart-shopping"></i></a></li>
-                <span id="lblCartCount"></span>
-                <a href="#" id="close"><i class="fa fa-times"></i></a>
-            </ul>
-        </div>
-        <div id="mobile">
-            <a href="cart.html"><i class="fa fa-cart-shopping"></i></a>
-            <i id="bar" class="fas fa-outdent"></i>
-            
-        </div>
-    </section>
+    <a href="#top"><img src="images\pngfind.com-drinks-png-8101.png" class="logo" alt="logo" style="height: 100px;"></a>        
+    <div>
+        <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li style="position: absolute; left: 50%; transform: translateX(-45%);"><span class="site-name">Drinkadero</span></li>
+            <li><a class="cart-icon active" id="mobile-nav-cart" href="cart.html"><i class="fa fa-cart-shopping"></i></a></li>
+            <span class="cart-quantity" id="lblCartCount"></span>
+            <a href="#" id="close"><i class="fa fa-times"></i></a>
+        </ul>
+    </div>
+    <div id="mobile">
+        <a href="cart.html"><i class="fa fa-cart-shopping"></i></a>
+        <i id="bar" class="fas fa-outdent"></i>
+        
+    </div>
+</section>
+
     
     
     <section id="cart-header" class="about-header">
@@ -48,8 +49,20 @@
     <div class="total-price-border">
         <div class="gradient-border orange-gradient-border">
             <h4 id="total-price"></h4>
+            
         </div>
+        <button class="button-normal">Check out</button>
     </div>
+    <section id="newsletter" class="section-p1 section-m1">
+      <div class="newstext">
+          <h4 id="news-h4">Subscribe to our newsletter</h4>
+          <p class="news-p">Get the latest news and <span>offers</span></p>
+      </div>
+      <div class="form">
+          <input id="news-input" type="text" placeholder="Enter your email">
+          <button class="button-normal" id="news-button">Subscribe</button>
+      </div>
+  </section>
     <footer class="section-p1">
         <div class="col">
             <h4>Contact</h4>
@@ -157,14 +170,16 @@ function displayCart() {
     itemQuantity.value = item.quantity;
     itemQuantity.addEventListener("change", function() {
       updateQuantity(item.id, this.value);
+      
     });
     itemInfo.appendChild(itemQuantity);
-
+    
     let removeBtn = document.createElement("button");
     removeBtn.classList.add("button-normal")
     removeBtn.textContent = "Remove";
     removeBtn.addEventListener("click", function() {
       removeItem(item.id);
+      updateCartQuantity();
     });
     itemInfo.appendChild(removeBtn);
 
@@ -198,6 +213,6 @@ let cart = [];
 loadCart();
 displayCart();
     </script>
-    
+    <script src="script.js"></script>
 </body>
 </html>
