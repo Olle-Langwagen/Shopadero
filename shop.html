@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="styles.css">
+    
 </head>
 
 <body>
@@ -85,10 +86,10 @@
             <div class="follow">
                 <h4>Follow us</h4>
                 <div class="footer-social">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/marketplace/stockholm/womens-slippers/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://mobile.twitter.com/slippersnft"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/slippersfamily_com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/watch?v=DgaAM9g7YXI"><i class="fab fa-youtube"></i></a>
                 </div>    
             </div>
 
@@ -96,42 +97,40 @@
 
         <div class="col">
             <h4>About</h4>
-            <a href="#">About Us</a>
-            <a href="#">Our Services</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms & Conditions</a>
+            <a href="about.html">About Us</a>
+            <a href="about.html">Our Services</a>
+            <a href="about.html">Privacy Policy</a>
+            <a href="about.html">Terms & Conditions</a>
 
         </div>
         <div class="col">
             <h4>Support</h4>
-            <a href="#">FAQ</a>
-            <a href="#">Contact Us</a>
-            <a href="#">Shipping</a>
-            <a href="#">Returns</a>
-            <a href="#">Order Status</a>
+            <a href="about.html">FAQ</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="about.html">Shipping</a>
+            <a href="about.html">Returns</a>
         </div>
        
         
 
         <div class="copyright">
-            <p>© 2021 All rights reserved</p>
+            <p>© 2023 All rights reserved <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa-solid fa-hippo"></i></a></p>
         </div>
     </footer>
-    <script src="script.js"></script>
     <script>
         window.onload = function() {
-            
-  let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-  fetch("products.json")
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+fetch("products.json")
     .then(response => response.json())
     .then(products => {
-      if (!Array.isArray(products)) {
+    if (!Array.isArray(products)) {
         throw new Error("Ingen array");
-      }
-      const productTemplate = document.getElementById("pro");
-      const productsContainer = document.getElementById("product-container");
-      products.forEach(product => {
+    }
+    const productTemplate = document.getElementById("pro");
+    const productsContainer = document.getElementById("product-container");
+    products.forEach(product => {
 
         const productElement = document.createElement("div");
         productElement.classList.add("product");
@@ -143,7 +142,7 @@
         productImage.classList.add("product-image");
 
         productImage.addEventListener("click", () => {
-          window.location.href = `singleproduct.html?id=${product.id}`;
+        window.location.href = `singleproduct.html?id=${product.id}`;
         });
 
         productElement.appendChild(productImage);
@@ -170,9 +169,9 @@
         const productRating = document.createElement('div');
         productRating.classList.add('star');
         for (let i = 0; i < product.rating; i++) {
-          const star = document.createElement('i');
-          star.classList.add('fas', 'fa-star');
-          productRating.appendChild(star);
+        const star = document.createElement('i');
+        star.classList.add('fas', 'fa-star');
+        productRating.appendChild(star);
         }
         productDescription.appendChild(productRating);
 
@@ -181,8 +180,20 @@
         productPrice.classList.add("product-price");
         productDescription.appendChild(productPrice);
 
-        const cartQuantity = document.querySelector('.cart-quantity');
-        cartQuantity.textContent = cart.length;
+        function updateCartQuantity() {
+            // Get the cart items from local storage
+            var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+          
+            // Calculate the total quantity of all items in the cart
+            var totalQuantity = 0;
+            for (var i = 0; i < cartItems.length; i++) {
+              totalQuantity += cartItems[i].quantity;
+            }
+          
+            // Set the cart quantity in the navbar
+            var cartQuantityElement = document.getElementById("lblCartCount");
+            cartQuantityElement.innerText = totalQuantity > 0 ? totalQuantity : "0";
+          }
         
 
         const addToCartBtn = document.createElement('button');
@@ -191,7 +202,7 @@
 
         addToCartBtn.addEventListener('click', () => {
             let itemFound = false;
-
+            updateCartQuantity();
             for (let i = 0; i < cart.length; i++) {
                 if (cart[i].id === product.id) {
                     cart[i].quantity++;
@@ -213,11 +224,11 @@
 
             localStorage.setItem('cart', JSON.stringify(cart));
             console.log(cart);
-            cartQuantity.textContent = cart.length;
+            
             
 
 
-
+        updateCartQuantity();
         //Button animation
         addToCartBtn.classList.add('animate__animated', 'animate__bounceIn');
 
@@ -226,14 +237,14 @@
         }, 2000);
         });
 
-
+        updateCartQuantity();
         productElement.appendChild(addToCartBtn);
         productsContainer.appendChild(productElement);
 
 
         // Search
         const searchForm = document.getElementById("search-form");
-        const products = document.querySelectorAll(".product");
+        const productsSearch = document.querySelectorAll(".product");
 
         searchForm.addEventListener("submit", function(event) {
         event.preventDefault();
@@ -241,7 +252,7 @@
         const searchInput = document.getElementById("search-input");
         const searchTerm = searchInput.value.trim().toLowerCase();
 
-        products.forEach(product => {
+        productsSearch.forEach(product => {
             const productName = product.querySelector('.product-name').textContent.toLowerCase();
             if (productName.includes(searchTerm) || searchTerm === "") {
             product.style.display = "block";
@@ -253,7 +264,8 @@
         });
     })
 }
-      </script>
+    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

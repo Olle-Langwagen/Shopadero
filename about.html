@@ -13,14 +13,17 @@
 
 <body>
     <section id="header">
-        <a href="#top"><img src="images\slippers-gc50344fc2_640.png" class="logo" alt="logo" style="height: 80px; width: 51,25px;"></a>        
+        
+        <a href="#top"><img src="images\pngfind.com-drinks-png-8101.png" class="logo" alt="logo" style="height: 100px;"></a>        
         <div>
             <ul id="navbar">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a class="active" href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a id="mobile-nav-cart" href="cart.html"><i class="fa fa-cart-shopping"></i></a></li>
+                <li style="position: absolute; left: 50%; transform: translateX(-50%);"><span class="site-name">Drinkadero</span></li>
+                <li><a class="cart-icon" id="mobile-nav-cart" href="cart.html"><i class="fa fa-cart-shopping"></i></a></li>
+                <span class="cart-quantity" id="lblCartCount"></span>
                 <a href="#" id="close"><i class="fa fa-times"></i></a>
             </ul>
         </div>
@@ -30,53 +33,45 @@
             
         </div>
     </section>
+
     <section id="about-header">
         <h2>About us</h2>
         <h3>This is our story</h3>
     </section>
-    
-    <section id="about-head" class="section-p1">
-        <img src="images\cartoon-564.gif" alt="">
-        <div>
-            <h2>Our Story</h2>
-            <p>
-                Welcome to our e-commerce store, where comfort and style meet. We specialize in offering a wide range of slippers and a select collection of shoes to meet all your footwear needs. Our passion is to provide you with the ultimate comfort and quality, without compromising on style.
+ 
+<section class="banner">
+    <h2>Welcome to Drinkadero</h2>
+    <p>Refresh, Energize, Delight</p>
+</section>
 
-With a wide range of sizes, colors and designs, we cater to all preferences, ensuring that you find the perfect pair to match your personal style. Whether you are looking for a cozy pair of slippers to lounge around the house in, or a comfortable yet stylish pair of shoes for daily wear, we've got you covered.
+<section class="services">
+    <h2>Our Services</h2>
+    <ul>
+        <li>Iced Teas</li>
+        <li>Energy Drinks</li>
+        <li>Nutrient-Rich Beverages</li>
+        <li>Custom Orders</li>
+    </ul>
+</section>
 
-We take pride in sourcing our products from trusted and reputable suppliers, ensuring that all of our products are made with the highest quality materials. Our aim is to provide you with the best shopping experience possible, from the comfort of your own home.
+<section class="about">
+    <h2>About Us</h2>
+    <p>Drinkadero is dedicated to crafting the finest drinks that are both healthy and delicious. We use only the best, all-natural ingredients and pair them with expert brewing techniques to bring out the flavors and aromas that make each drink unique.</p>
+</section>
 
-So why wait? Browse our collection today and find the perfect pair for you. We guarantee that you won't be disappointed!
-            </p>
-        </div>
-    </section>
-
-    <section id="feature" class="section-p1">
-        <div class="feature-box">
-            <img src="images\f1.png" alt="product1">
-            <h6>Free Shipping</h6>
-        </div>
-        <div class="feature-box">
-            <img src="images\f1.png" alt="product1">
-            <h6>Online Order</h6>
-        </div>
-        <div class="feature-box">
-            <img src="images\f1.png" alt="product1">
-            <h6>Save Money</h6>
-        </div>
-        <div class="feature-box">
-            <img src="images\f1.png" alt="product1">
-            <h6>Promotions</h6>
-        </div>
-        <div class="feature-box">
-            <img src="images\f1.png" alt="product1">
-            <h6>Happy Sell</h6>
-        </div>
-        <div class="feature-box">
-            <img src="images\f1.png" alt="product1">
-            <h6>24/7 Support</h6>
-        </div>
-    </section>
+<section class="faq">
+    <h2>FAQ</h2>
+    <dl>
+        <dt>Q: How long will it take to receive my order?</dt>
+        <dd>A: We typically ship orders within 1-2 business days, and delivery time depends on your location.</dd>
+        <dt>Q: What is your return policy?</dt>
+        <dd>A: We accept returns of unopened products within 14 days of delivery. Please see our returns policy for more information.</dd>
+        <dt>Q: Are your drinks all-natural?</dt>
+        <dd>A: Yes, all of our drinks are made with natural ingredients and are free from artificial flavors, colors, and preservatives.</dd>
+        <dt>Q: Can I place a custom order?</dt>
+        <dd>A: Yes, we offer custom orders. Please contact us to discuss your requirements.</dd>
+    </dl>
+</section>
     <footer class="section-p1">
         <div class="col">
             <h4>Contact</h4>
@@ -86,10 +81,10 @@ So why wait? Browse our collection today and find the perfect pair for you. We g
             <div class="follow">
                 <h4>Follow us</h4>
                 <div class="footer-social">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/marketplace/stockholm/womens-slippers/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://mobile.twitter.com/slippersnft"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/slippersfamily_com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/watch?v=DgaAM9g7YXI"><i class="fab fa-youtube"></i></a>
                 </div>    
             </div>
 
@@ -97,25 +92,24 @@ So why wait? Browse our collection today and find the perfect pair for you. We g
 
         <div class="col">
             <h4>About</h4>
-            <a href="#">About Us</a>
-            <a href="#">Our Services</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms & Conditions</a>
+            <a href="about.html">About Us</a>
+            <a href="about.html">Our Services</a>
+            <a href="about.html">Privacy Policy</a>
+            <a href="about.html">Terms & Conditions</a>
 
         </div>
         <div class="col">
             <h4>Support</h4>
-            <a href="#">FAQ</a>
-            <a href="#">Contact Us</a>
-            <a href="#">Shipping</a>
-            <a href="#">Returns</a>
-            <a href="#">Order Status</a>
+            <a href="about.html">FAQ</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="about.html">Shipping</a>
+            <a href="about.html">Returns</a>
         </div>
        
         
 
         <div class="copyright">
-            <p>© 2021 All rights reserved</p>
+            <p>© 2023 All rights reserved <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa-solid fa-hippo"></i></a></p>
         </div>
     </footer>
     

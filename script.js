@@ -1,3 +1,5 @@
+
+
 const bar = document.getElementById('bar');
 const nav = document.getElementById('navbar');
 const close = document.getElementById('close');
@@ -40,4 +42,28 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 }
+
+function updateCartQuantity() {
+  // Check if the current page is one of the specific pages where you want to call this function
+  var allowedPages = [ '/contact.html','/about.html', '/singleproduct.html']; // Add the specific page URLs here
+  var currentPage = window.location.pathname; // Get the current page URL
+  if (allowedPages.includes(currentPage)) {
+    // Get the cart items from local storage
+    var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Calculate the total quantity of all items in the cart
+    var totalQuantity = 0;
+    for (var i = 0; i < cartItems.length; i++) {
+      totalQuantity += cartItems[i].quantity;
+    }
+
+    // Set the cart quantity in the navbar
+    var cartQuantityElement = document.getElementById("lblCartCount");
+    cartQuantityElement.innerText = totalQuantity > 0 ? totalQuantity : "0";
+    console.log("Cart quantity updated")
+  }
+}
+updateCartQuantity();
+
+
 

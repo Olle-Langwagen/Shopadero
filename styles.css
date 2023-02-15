@@ -571,6 +571,91 @@ footer .copyright{
 }
 
 
+/*New about page*/
+.banner {
+	background-image: url('banner.jpg');
+	background-size: cover;
+	background-position: center;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+.services {
+	padding: 50px 0;
+	background-color: #f9f9f9;
+}
+
+.services h2 {
+	font-size: 36px;
+	text-align: center;
+}
+
+.services ul {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.services li {
+	margin: 20px;
+	padding: 20px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+.about {
+	padding: 50px;
+}
+
+.about h2 {
+	font-size: 36px;
+	text-align: center;
+}
+
+.about p {
+	font-size: 18px;
+	line-height: 1.5;
+	text-align: justify;
+}
+
+.faq {
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.faq h2 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.faq dl {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.faq dt {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.faq dd {
+    margin-left: 0;
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+
+
 /* Contact Page */
 #contact-details{
     display: flex;

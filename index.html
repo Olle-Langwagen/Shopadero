@@ -10,19 +10,21 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="styles.css">
+    
 </head>
 
 <body>
     <section id="header">
-        <a href="#top"><img src="images\pngfind.com-drinks-png-8101.png" class="logo" alt="logo" style="height: 100px;"></a>        
         
+        <a href="#top"><img src="images\pngfind.com-drinks-png-8101.png" class="logo" alt="logo" style="height: 100px;"></a>        
         <div>
             <ul id="navbar">
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a id="mobile-nav-cart" href="cart.html"><i class="fa fa-cart-shopping"></i></a></li>
+                <li style="position: absolute; left: 50%; transform: translateX(-50%);"><span class="site-name">Drinkadero</span></li>
+                <li><a class="cart-icon" id="mobile-nav-cart" href="cart.html"><i class="fa fa-cart-shopping"></i></a></li>
                 <span class="cart-quantity" id="lblCartCount"></span>
                 <a href="#" id="close"><i class="fa fa-times"></i></a>
             </ul>
@@ -134,21 +136,19 @@
             <p>© 2023 All rights reserved <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa-solid fa-hippo"></i></a></p>
         </div>
     </footer>
-
-    <script src="script.js"></script>
     <script>
         window.onload = function() {
-  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-  fetch("products.json")
+fetch("products.json")
     .then(response => response.json())
     .then(products => {
-      if (!Array.isArray(products)) {
+    if (!Array.isArray(products)) {
         throw new Error("Ingen array");
-      }
-      const productTemplate = document.getElementById("pro");
-      const productsContainer = document.getElementById("product-container");
-      products.slice(0, 4).forEach(product => {
+    }
+    const productTemplate = document.getElementById("pro");
+    const productsContainer = document.getElementById("product-container");
+    products.slice(0, 4).forEach(product => {
 
         const productElement = document.createElement("div");
         productElement.classList.add("product");
@@ -158,7 +158,7 @@
         productImage.classList.add("product-image");
 
         productImage.addEventListener("click", () => {
-          window.location.href = `singleproduct.html?id=${product.id}`;
+        window.location.href = `singleproduct.html?id=${product.id}`;
         });
 
         productElement.appendChild(productImage);
@@ -185,9 +185,9 @@
         const productRating = document.createElement('div');
         productRating.classList.add('star');
         for (let i = 0; i < product.rating; i++) {
-          const star = document.createElement('i');
-          star.classList.add('fas', 'fa-star');
-          productRating.appendChild(star);
+        const star = document.createElement('i');
+        star.classList.add('fas', 'fa-star');
+        productRating.appendChild(star);
         }
         productDescription.appendChild(productRating);
 
@@ -199,6 +199,22 @@
         const cartQuantity = document.querySelector('.cart-quantity');
         cartQuantity.textContent = cart.length;
 
+        //Update cart quantity function
+        function updateCartQuantity() {
+            // Get the cart items from local storage
+            var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+          
+            // Calculate the total quantity of all items in the cart
+            var totalQuantity = 0;
+            for (var i = 0; i < cartItems.length; i++) {
+              totalQuantity += cartItems[i].quantity;
+            }
+          
+            // Set the cart quantity in the navbar
+            var cartQuantityElement = document.getElementById("lblCartCount");
+            cartQuantityElement.innerText = totalQuantity > 0 ? totalQuantity : "0";
+          }
+
 
         const addToCartBtn = document.createElement('button');
         addToCartBtn.classList.add('button-normal', 'cart');
@@ -206,7 +222,7 @@
 
         addToCartBtn.addEventListener('click', () => {
             let itemFound = false;
-
+            updateCartQuantity();
             for (let i = 0; i < cart.length; i++) {
                 if (cart[i].id === product.id) {
                     cart[i].quantity++;
@@ -228,7 +244,7 @@
 
             localStorage.setItem('cart', JSON.stringify(cart));
             console.log(cart);
-
+            updateCartQuantity();
             // Start animation here
             addToCartBtn.classList.add('animate__animated', 'animate__bounceIn');
             
@@ -239,14 +255,15 @@
             }, 2000);
         });
 
-
+        updateCartQuantity();
         productElement.appendChild(addToCartBtn);
         productsContainer.appendChild(productElement);
         });
     })
 }
-      </script>
-
+    </script>
+    <script src="script.js"></script>
+    
 </body>
 
 </html>
