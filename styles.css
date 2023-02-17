@@ -142,6 +142,9 @@ body{
     position: relative;
     text-align: center;
 }
+#navbar .nav-name{
+    padding-right: 15rem;
+}
 #navbar li a{
     text-decoration: none;
     color: #222;
@@ -840,16 +843,11 @@ margin-bottom: 20px;
 
 
 
-/*Fly to cart*/
-@keyframes flyToCart {
-    0% {
-      transform: translate(0, 0);
+@media screen and (max-width: 950px){
+    #navbar .nav-name{
+        padding-right: 0rem;
     }
-    100% {
-      transform: translate(0, -1000px);
-    }
-  }
-
+}
 @media screen and (max-width: 799px){
     .section-p1{
         padding: 40px 40px;
@@ -871,6 +869,9 @@ margin-bottom: 20px;
     }
     #navbar li{
         margin-bottom: 25px;
+    }
+    #navbar .nav-name{
+        padding-right: 0rem;
     }
     #navbar.active{
         right: 0px;
@@ -894,6 +895,9 @@ margin-bottom: 20px;
         cursor: pointer;
     }
     #mobile-nav-cart{
+        display: none;
+    }
+    .cart-quantity{
         display: none;
     }
     #hero{
