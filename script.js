@@ -76,25 +76,25 @@ updateCartQuantity();
 
 const faqQuestions = document.querySelectorAll('.faq dt');
 
-      // Add a click event listener to each question
-      faqQuestions.forEach(question => {
-        question.addEventListener('click', () => {
-          // Toggle the active class on the clicked question
-          question.classList.toggle('active');
+// Add a click event listener to each question
+faqQuestions.forEach(question => {
+  question.addEventListener('click', () => {
+    // Toggle the active class on the clicked question
+    question.classList.toggle('active');
 
-          // Select the corresponding answer element
-          const answer = question.nextElementSibling;
+    // Select the corresponding answer element
+    const answer = question.nextElementSibling;
 
-          // Toggle the display of the answer element
-          if (answer.style.maxHeight) {
-            answer.style.maxHeight = null;
-            answer.style.opacity = 0;
-            answer.style.transform = 'translateY(-10px)';
-          } else {
-            answer.style.maxHeight = answer.scrollHeight + 'px';
-            answer.style.opacity = 1;
-            answer.style.transform = 'translateY(0)';
-          }
+    // Toggle the display of the answer element
+    if (answer.style.maxHeight) {
+      answer.style.maxHeight = null;
+      answer.style.opacity = 0;
+      answer.style.transform = 'translateY(-10px)';
+    } else {
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      answer.style.opacity = 1;
+      answer.style.transform = 'translateY(0)';
+    }
   });
 });
 
