@@ -53,7 +53,7 @@
             
         </div>
         
-        <button onclick="window.location.href='cartMessege.html'" class="button-normal">Check out</button>
+        <button onclick="removeAll()" class="button-normal">Check out</button>
         
     </div>
     <section id="newsletter" class="section-p1 section-m1">
@@ -127,6 +127,22 @@ function removeItem(id) {
     saveCart();
     displayCart();
   }
+}
+
+//Remove all items from the cart
+function removeAll(){
+  if (cart.length === 0){
+    alert("Your cart is empty")
+  }
+  else{
+  cart = []
+  saveCart()
+  displayCart()
+  
+  window.location.href='cartMessege.html'
+  }
+
+
 }
 
 // Display the cart in the cart.html file
