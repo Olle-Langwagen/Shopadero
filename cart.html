@@ -135,6 +135,7 @@ function removeAll(){
     alert("Your cart is empty")
   }
   else{
+  localStorage.clear();
   cart = []
   saveCart()
   displayCart()
